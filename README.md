@@ -41,8 +41,7 @@ The tag structure to plop all the data into a table from a csv file with a heade
 The tag structure for a file without a header row would look like this:
 
 ```
-    {{csv:read file="example/header.csv" header="no"}}	
-		</tr>		
+    {{csv:read file="example/header.csv" header="no"}}		
 		{{rows}}
 		<tr>
 			{{columns}}
