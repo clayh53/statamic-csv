@@ -1,0 +1,45 @@
+<h3>CSV test</h3>
+<div>
+	<h4>table with header data</h4>
+	<table>
+	<em>
+	{{csv:read file="example/header.csv" header="yes"}}
+	
+		<tr>
+		{{header}}
+		<th>{{name}}</th>
+		{{/header}}
+		</tr>
+		
+		{{rows}}
+		<tr>
+			{{columns}}
+			<td>{{value}}</td>
+			{{/columns}}
+		</tr>
+		 
+		{{/rows}}
+	
+	{{/csv:read}}
+	</em>
+	</table>
+</div>
+
+<div>
+	<h4>table without header data</h4>
+	<table>
+	<em>
+	{{csv:read file="example/no-header.csv" header="no"}}	
+		{{rows}}
+		<tr>
+			{{columns}}
+			<td>{{value}}</td>
+			{{/columns}}
+		</tr>
+		 
+		{{/rows}}
+	
+	{{/csv:read}}
+	</em>
+	</table>
+</div>
